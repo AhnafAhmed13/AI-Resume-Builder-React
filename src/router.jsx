@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
-import App from './App';
-import ResumeResult from './pages/ResumeResultPage'
+import Home from './pages/Home';
+import ResumeResult from './components/ResumeResult'
 
 export const router = createBrowserRouter([
-  { path: '/', element: <App /> },
+  { path: '/', element: <Home /> },
   { path: '/result', element: <ResumeResult />}
 ]);
