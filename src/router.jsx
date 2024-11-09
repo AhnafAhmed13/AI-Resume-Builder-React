@@ -5,12 +5,18 @@ import CoverLetterBuilder from './pages/CoverLetterBuilderPage';
 import MostLikelyToGetHired from './pages/MostLikelyToGetHiredPage';
 import TipsForTheInterview from './pages/TipsForTheInterviewPage';
 import StrengthsAndWeaknesses from './pages/StrengthsAndWeaknessesPage';
+import Layout from './layout.jsx';
 
 export const router = createBrowserRouter([
-  { path: '/', element: <Home /> },
-  { path: '/resume-builder', element: <ResumeBuilder />},
-  { path: '/cover-letter-builder', element: <CoverLetterBuilder />},
-  { path: '/most-likely-to-get-hired', element: <MostLikelyToGetHired />},
-  { path: '/tips-for-the-interview', element: <TipsForTheInterview />},
-  { path: '/strengths-and-weaknesses', element: <StrengthsAndWeaknesses />}
+  {
+    element: <Layout />, // Wrap all routes in Layout
+    children: [
+      { path: '/', element: <Home /> },
+      { path: '/resume-builder', element: <ResumeBuilder /> },
+      { path: '/cover-letter-builder', element: <CoverLetterBuilder /> },
+      { path: '/most-likely-to-get-hired', element: <MostLikelyToGetHired /> },
+      { path: '/tips-for-the-interview', element: <TipsForTheInterview /> },
+      { path: '/strengths-and-weaknesses', element: <StrengthsAndWeaknesses /> },
+    ],
+  },
 ]);
