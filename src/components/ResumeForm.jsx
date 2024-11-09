@@ -41,7 +41,19 @@ export default function ResumeForm({ onSubmit }) {
         className="w-full p-2 border border-gray-300 rounded-md"
         required
       />
-      
+
+      <label htmlFor="linkedin" className="block text-gray-700 font-bold">
+        LinkedIn Profile Link:
+      </label>
+      <input
+        type="text"
+        placeholder="linkedin.com/in/username"
+        name="linkedin"
+        {...register("linkedin")}
+        className="w-full p-2 border border-gray-300 rounded-md"
+        required
+      />
+
       <label htmlFor="job" className="block text-gray-700 font-bold">
         Job Posting Link:
       </label>
