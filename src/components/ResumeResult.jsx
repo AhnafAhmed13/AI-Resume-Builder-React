@@ -1,4 +1,3 @@
-// ResumeResult.js
 export default function ResumeResult({ pdfUrl }) {
   return (
     <div className="p-6 mt-6 bg-gray-50 shadow-md rounded-lg max-w-md mx-auto text-center">

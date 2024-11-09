@@ -10,7 +10,7 @@ export default function ResumeForm({ onSubmit }) {
     formData.append('resume', data.resume[0]);
 
     try {
-      const response = await fetch('http://localhost:3000/get_resume', {
+      const response = await fetch('http://localhost:3000/get_cover_letter', {
         method: 'POST',
         body: formData,
       });
@@ -65,7 +65,7 @@ export default function ResumeForm({ onSubmit }) {
         required
       />
       
-      <input type="submit" value="Generate Resume" className="w-full mt-4 p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 cursor-pointer" />
+      <input type="submit" value="Generate Cover Letter" className="w-full mt-4 p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 cursor-pointer" />
     </form>
   );
 }
