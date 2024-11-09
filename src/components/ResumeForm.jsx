@@ -1,3 +1,4 @@
+// ResumeForm.js
 import { useForm } from 'react-hook-form';
 
 export default function ResumeForm({ onSubmit }) {
@@ -29,34 +30,40 @@ export default function ResumeForm({ onSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit(handleFormSubmit)}>
-      <label htmlFor="github">GitHub Profile Link:</label>
+    <form onSubmit={handleSubmit(handleFormSubmit)} className="space-y-4 p-6 bg-white shadow-md rounded-lg max-w-md mx-auto">
+      <label htmlFor="github" className="block text-gray-700 font-bold">
+        GitHub Profile Link:
+      </label>
       <input
         type="text"
         placeholder="github.com/username"
         name="github"
         {...register("github")}
-        required
+        className="w-full p-2 border border-gray-300 rounded-md"
       />
       
-      <label htmlFor="job">Job Posting Link:</label>
+      <label htmlFor="job" className="block text-gray-700 font-bold">
+        Job Posting Link:
+      </label>
       <input
         type="text"
         placeholder="www.example.com/job"
         name="job"
         {...register("job")}
-        required
+        className="w-full p-2 border border-gray-300 rounded-md"
       />
       
-      <label htmlFor="resume">Upload your resume:</label>
+      <label htmlFor="resume" className="block text-gray-700 font-bold">
+        Upload your resume:
+      </label>
       <input
         type="file"
         name="resume"
         {...register("resume")}
-        required
+        className="w-full p-2 border border-gray-300 rounded-md"
       />
       
-      <input type="submit" value="Generate Resume" />
+      <input type="submit" value="Generate Resume" className="w-full mt-4 p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 cursor-pointer" />
     </form>
   );
 }
